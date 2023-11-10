@@ -4,11 +4,77 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <link rel="stylesheet" href="./css/auth.css" />
   </head>
-  <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+  <body class="dark-theme-">
+    <button type="button" class="dbw">Click for write</button>
+    <button type="button" class="dbr">Click for read</button>
+    <button type="button" class="exit">EXIT</button>
+    <p>Hello</p>
+    <button type="button" class="auth-modal-open">Click me</button>
+
+    <!--  -->
+<div class="auth-modal-backdrop auth-backdrop-hidden">
+    <div class="auth-modal">
+      <button class="auth-modal-close"><svg class="auth-modal-close-icon">
+      <use href="./images/icons-sprite.svg#x-close-btn"></use>
+    </svg></button>
+    <div class="js-sign-up">
+      <form class="auth-modal-form js-sign-up-form">
+        <input
+          type="text"
+          class="auth-modal-input"
+          name="username"
+          placeholder="Name"
+          required
+        />
+        <input
+          type="email"
+          class="auth-modal-input"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="password"
+          class="auth-modal-input"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <button type="submit" class="auth-modal-submit">Sign up</button>
+      </form>
+    </div>
+    <div class="js-sign-in auth-hidden">
+      <form class="auth-modal-form js-sign-in-form">
+        <input
+          type="email"
+          class="auth-modal-input"
+          name="email"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="password"
+          class="auth-modal-input"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <button type="submit" class="auth-modal-submit">Sign in</button>
+      </form>
+      </div>
+      <ul class="auth-modal-links">
+        <li class="js-sign-up-link active">
+        Sign up
+        </li>
+        <li class="js-sign-in-link">
+        Sign in
+        </li>
+      </ul>
+    </div>
+
+
+    <script type="module" src="./js/auth.js"></script>
   </body>
 </html>
